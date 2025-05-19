@@ -2,7 +2,7 @@
 
 Made this little widget to display the available disk space on both my drives.  It sits in the bottom-left corner of the screen where that annoying weather widget is supposed to be😀
 
-![Screenshot]([./Screenshot.png))
+![Screenshot](https://github.com/tabrezakhtar/taskbar-widget/blob/master/Screenshot.png))
 
 ---
 
