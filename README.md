@@ -9,13 +9,12 @@ Made this little widget to display the available disk space on both my drives.  
 ## 🛠 Requirements
 
 - Windows 10 / 11
-- [.NET Framework 4.7.2+](https://dotnet.microsoft.com/en-us/download/dotnet-framework) **or** [.NET Core / .NET 6+](https://dotnet.microsoft.com/en-us/download/dotnet)
+- [Latest .NET Framework](https://dotnet.microsoft.com/en-us/download/dotnet-framework)
 
 ---
 
 ## 🚀 Getting Started
 
-1. Clone or download the repo:
-
-   ```bash
-   git clone https://github.com/yourusername/disk-widget-winforms.git
+1. Download [Visual Studio Community Edition](https://visualstudio.microsoft.com/vs/community/)
+2. Clone the Repo.
+3. Load the TaskBarWidget.sln file to load the project.
