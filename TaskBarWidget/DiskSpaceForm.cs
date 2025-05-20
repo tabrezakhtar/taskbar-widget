@@ -15,7 +15,7 @@ namespace TaskBarWidget
             this.BackColor = ColorTranslator.FromHtml("#1C1C1C");
             this.ForeColor = Color.White;
             this.Size = new Size(200, 30);
-            this.Location = new Point(0, Screen.PrimaryScreen.Bounds.Height - 52);
+            this.Location = new Point(10, Screen.PrimaryScreen.Bounds.Height - 52);
 
             this.ShowInTaskbar = false;
 
@@ -23,7 +23,7 @@ namespace TaskBarWidget
             {
                 Dock = DockStyle.Fill,
                 TextAlign = ContentAlignment.MiddleLeft,
-                Font = new Font("Segoe UI", 10, FontStyle.Bold)
+                Font = new Font("Courier New", 8, FontStyle.Bold)
             };
             this.Controls.Add(diskLabel);
 
