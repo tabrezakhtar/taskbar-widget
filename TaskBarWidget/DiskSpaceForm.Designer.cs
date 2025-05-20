@@ -28,33 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            components = new System.ComponentModel.Container();
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
-            // label1
+            // timer1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Consolas", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(171, 212);
-            label1.Name = "label1";
-            label1.Size = new Size(49, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            timer1.Enabled = true;
+            timer1.Interval = 500;
+            timer1.Tick += timer1_Tick;
             // 
             // DiskSpaceForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
             Name = "DiskSpaceForm";
             Text = "Form1";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private Label diskLabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }

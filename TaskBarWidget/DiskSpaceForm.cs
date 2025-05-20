@@ -7,25 +7,22 @@ namespace TaskBarWidget
 {
     public partial class DiskSpaceForm : Form
     {
-        private Label diskLabel;
-        private System.Windows.Forms.Timer updateTimer;
-
         public DiskSpaceForm()
         {
-            // Set form properties
+            InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             this.StartPosition = FormStartPosition.Manual;
             this.BackColor = ColorTranslator.FromHtml("#1C1C1C");
             this.ForeColor = Color.White;
             this.Size = new Size(200, 30);
-            this.Location = new Point(0, Screen.PrimaryScreen.Bounds.Height - 42);
+            this.Location = new Point(0, Screen.PrimaryScreen.Bounds.Height - 52);
 
             this.ShowInTaskbar = false;
 
             diskLabel = new Label()
             {
                 Dock = DockStyle.Fill,
-                TextAlign = ContentAlignment.MiddleCenter,
+                TextAlign = ContentAlignment.MiddleLeft,
                 Font = new Font("Segoe UI", 10, FontStyle.Bold)
             };
             this.Controls.Add(diskLabel);
@@ -46,17 +43,17 @@ namespace TaskBarWidget
             diskLabel.Text += $"D:\\ {freeSpace} of {totalSpace} GB free";
         }
 
-        protected override void OnShown(EventArgs e)
-        {
-            base.OnShown(e);
-            TopMostHelper.StartEnforcingTopMost(this);
-        }
-
         [STAThread]
         public static void Main()
         {
             Application.EnableVisualStyles();
             Application.Run(new DiskSpaceForm());
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+            UpdateDiskSpace(null, null);
         }
     }
 }
