@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             timer1 = new System.Windows.Forms.Timer(components);
+            timer2 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // timer1
@@ -37,6 +38,11 @@
             timer1.Enabled = true;
             timer1.Interval = 500;
             timer1.Tick += timer1_Tick;
+            // 
+            // timer2
+            // 
+            timer2.Interval = 20000;
+            timer2.Tick += timer2_Tick;
             // 
             // DiskSpaceForm
             // 
@@ -52,5 +58,6 @@
 
         private Label diskLabel;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }

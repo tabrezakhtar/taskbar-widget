@@ -53,6 +53,10 @@ namespace TaskBarWidget
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.TopMost = true;
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
             UpdateDiskSpace(null, null);
         }
     }
