@@ -15,7 +15,7 @@ namespace TaskBarWidget
             this.BackColor = ColorTranslator.FromHtml("#1C1C1C");
             this.ForeColor = Color.White;
             this.Size = new Size(200, 30);
-            this.Location = new Point(10, Screen.PrimaryScreen.Bounds.Height - 52);
+            //this.Location = new Point(10, Screen.PrimaryScreen.Bounds.Height - 52);
 
             this.ShowInTaskbar = false;
 
@@ -52,6 +52,7 @@ namespace TaskBarWidget
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            this.Location = new Point(10, Screen.PrimaryScreen.Bounds.Height - 52);
             this.TopMost = true;
         }
 
