@@ -41,6 +41,7 @@
             // 
             // timer2
             // 
+            timer2.Enabled = true;
             timer2.Interval = 20000;
             timer2.Tick += timer2_Tick;
             // 
